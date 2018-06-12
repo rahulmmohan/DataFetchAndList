@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
+import android.view.View
 import sample.network.rahul.datafetchandlist.databinding.ActivityMainBinding
 import sample.network.rahul.datafetchandlist.datasource.DataManager
 import sample.network.rahul.datafetchandlist.model.Announcement
-import sample.network.rahul.datafetchandlist.model.Title
 import sample.network.rahul.datafetchandlist.ui.AnnouncementRecyclerViewAdapter
 
 
@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity(),AnnouncementRecyclerViewAdapter.Announc
     override fun onResponse(list: ArrayList<Announcement>) {
         announcements.addAll(list)
         adapter!!.notifyDataSetChanged()
+        binding!!.progressBar.visibility = View.GONE
+        binding!!.recyclerView.visibility = View.VISIBLE
     }
 
 
