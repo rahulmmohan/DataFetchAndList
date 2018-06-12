@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:bind="http://schemas.android.com/apk/res/android">
+
     <data>
+
         <variable
             name="announcement"
             type="sample.network.rahul.datafetchandlist.model.Announcement" />
@@ -10,28 +12,29 @@
             type="sample.network.rahul.datafetchandlist.ui.AnnouncementRecyclerViewAdapter.AnnouncementItemListener" />
     </data>
 
-    <RelativeLayout
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground"
-        android:padding="10dp"
-        android:onClick="@{() -> itemClickListener.onItemClick(announcement)}">
+        android:onClick="@{() -> itemClickListener.onItemClick(announcement)}"
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="70dp"
-            android:layout_height="70dp" />
+            android:layout_height="70dp"
+            bind:imageUrl="@{announcement.image.value}" />
 
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="@{announcement.title.value}"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
-            android:layout_toRightOf="@+id/imageView"
             android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="@{announcement.title.value}"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
