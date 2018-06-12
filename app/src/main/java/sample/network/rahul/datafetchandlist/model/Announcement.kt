@@ -1,4 +1,4 @@
-package sample.network.rahul.datafetchandlist.datasource
+package sample.network.rahul.datafetchandlist.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
@@ -8,14 +8,14 @@ import com.google.gson.annotations.SerializedName
 class Announcement {
     @SerializedName("ANNOUNCEMENT_DATE")
     @Expose
-    var aNNOUNCEMENTDATE: Date? = null
+    var date: Date? = null
     @SerializedName("ANNOUNCEMENT_TITLE")
     @Expose
-    var aNNOUNCEMENTTITLE: Title? = null
+    var title: Title? = null
     @SerializedName("ANNOUNCEMENT_IMAGE")
     @Expose
-    var aNNOUNCEMENTIMAGE: Image? = null
+    var image: Image? = null
     @SerializedName("ANNOUNCEMENT_HTML")
     @Expose
-    var aNNOUNCEMENTHTML: Html? = null
+    var html: Html? = null
 }

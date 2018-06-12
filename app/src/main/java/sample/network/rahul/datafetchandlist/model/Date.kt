@@ -1,4 +1,4 @@
-package sample.network.rahul.datafetchandlist.datasource
+package sample.network.rahul.datafetchandlist.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

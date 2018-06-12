@@ -5,16 +5,17 @@
             name="announcement"
             type="sample.network.rahul.datafetchandlist.model.Announcement" />
 
-        <!--<variable-->
-            <!--name="itemClickListener"-->
-            <!--type="zoftino.com.databinding.FlightsEventListener" />-->
+        <variable
+            name="itemClickListener"
+            type="sample.network.rahul.datafetchandlist.ui.AnnouncementRecyclerViewAdapter.AnnouncementItemListener" />
     </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:onClick="@{() -> itemClickListener.onItemClick(announcement)}">
 
         <ImageView
             android:id="@+id/imageView"

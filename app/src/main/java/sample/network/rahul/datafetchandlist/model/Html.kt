@@ -1,11 +1,11 @@
-package sample.network.rahul.datafetchandlist.datasource
+package sample.network.rahul.datafetchandlist.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 
 
-class Title {
+class Html {
     @SerializedName("Tag")
     @Expose
     var tag: String? = null
@@ -18,4 +18,5 @@ class Title {
     @SerializedName("IsBinaryUnique")
     @Expose
     var isBinaryUnique: Boolean? = null
+
 }
