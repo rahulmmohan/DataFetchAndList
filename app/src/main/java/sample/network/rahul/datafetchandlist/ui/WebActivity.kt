@@ -15,12 +15,12 @@ class WebActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_web)
-        val announcement:Announcement = intent.getSerializableExtra("data") as Announcement
+        val announcement:Announcement = intent.getSerializableExtra(getString(R.string.data_key)) as Announcement
         binding!!.announcement = announcement
     }
 }
 
 @BindingAdapter("htmlData")
 fun loadHtml(view: WebView, html: String) {
-    view.loadData(html, "text/html", "UTF-8");
+    view.loadData(html, "text/html", "UTF-8")
 }

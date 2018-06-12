@@ -1,17 +1,15 @@
 package sample.network.rahul.datafetchandlist.datasource
 
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.Retrofit
-import com.google.gson.GsonBuilder
-import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import sample.network.rahul.datafetchandlist.model.Announcement
 
 
 class DataManager : Callback<ArrayList<Announcement>> {
-lateinit var listener: DataCallback
+private lateinit var listener: DataCallback
     fun loadData(listener:DataCallback) {
         this.listener = listener
         val retrofit = Retrofit.Builder()
@@ -44,7 +42,7 @@ lateinit var listener: DataCallback
 
     companion object {
 
-        internal val BASE_URL = "http://94.56.199.34/EMC/IPDP/"
+        internal const val BASE_URL = "http://94.56.199.34/EMC/IPDP/"
     }
 
     interface DataCallback{

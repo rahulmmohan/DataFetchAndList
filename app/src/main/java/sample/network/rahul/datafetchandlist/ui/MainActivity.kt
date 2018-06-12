@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity(),AnnouncementRecyclerViewAdapter.Announc
 
     private var adapter: AnnouncementRecyclerViewAdapter? = null
     private var binding: ActivityMainBinding? = null
-    var announcements: ArrayList<Announcement> = ArrayList()
+    private var announcements: ArrayList<Announcement> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity(),AnnouncementRecyclerViewAdapter.Announc
 
     override fun onItemClick(announcement: Announcement) {
         val intent = Intent(this, WebActivity::class.java)
-        intent.putExtra("data", announcement)
+        intent.putExtra(getString(R.string.data_key), announcement)
         startActivity(intent)
     }
 }

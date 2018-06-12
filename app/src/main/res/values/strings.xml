@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">DataFetchAndList</string>
+    <string name="app_name">Announcements</string>
+    <string name="list_image">list image</string>
+    <string name="data_key">data</string>
 </resources>

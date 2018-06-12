@@ -23,7 +23,8 @@
             android:id="@+id/imageView"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            bind:imageUrl="@{announcement.image.value}" />
+            bind:imageUrl="@{announcement.image.value}"
+            android:contentDescription="@string/list_image" />
 
         <TextView
             android:id="@+id/title"
