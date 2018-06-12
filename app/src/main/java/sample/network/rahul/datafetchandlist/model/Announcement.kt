@@ -2,10 +2,10 @@ package sample.network.rahul.datafetchandlist.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 
-
-class Announcement {
+class Announcement: Serializable {
     @SerializedName("ANNOUNCEMENT_TITLE")
     @Expose
     var title: Field? = null
