@@ -6,16 +6,13 @@ import com.google.gson.annotations.SerializedName
 
 
 class Announcement {
-    @SerializedName("ANNOUNCEMENT_DATE")
-    @Expose
-    var date: Date? = null
     @SerializedName("ANNOUNCEMENT_TITLE")
     @Expose
-    var title: Title? = null
-    @SerializedName("ANNOUNCEMENT_IMAGE")
+    var title: Field? = null
+    @SerializedName("ANNOUNCEMENT_IMAGE_THUMBNAIL")
     @Expose
-    var image: Image? = null
+    var image: Field? = null
     @SerializedName("ANNOUNCEMENT_HTML")
     @Expose
-    var html: Html? = null
+    var html: Field? = null
 }

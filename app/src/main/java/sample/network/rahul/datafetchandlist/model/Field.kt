@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 
 
-class Image {
+class Field {
     @SerializedName("Tag")
     @Expose
     var tag: String? = null
@@ -18,5 +18,4 @@ class Image {
     @SerializedName("IsBinaryUnique")
     @Expose
     var isBinaryUnique: Boolean? = null
-
 }
