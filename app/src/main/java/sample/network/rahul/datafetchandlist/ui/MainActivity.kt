@@ -36,6 +36,11 @@ class MainActivity : AppCompatActivity(),AnnouncementRecyclerViewAdapter.Announc
         binding!!.recyclerView.visibility = View.VISIBLE
     }
 
+    override fun onFailure() {
+        binding!!.recyclerView.visibility = View.GONE
+        binding!!.error.visibility = View.VISIBLE
+        binding!!.progressBar.visibility = View.GONE
+    }
 
     override fun onItemClick(announcement: Announcement) {
         val intent = Intent(this, WebActivity::class.java)

@@ -11,6 +11,16 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="@string/something_went_wrong"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerView"

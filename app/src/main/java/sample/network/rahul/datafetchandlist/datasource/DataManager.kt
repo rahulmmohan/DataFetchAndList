@@ -32,12 +32,13 @@ private lateinit var listener: DataCallback
                 listener.onResponse(announcementList)
             }
         } else {
-            System.out.println(response.errorBody())
+            listener.onFailure()
         }
     }
 
     override fun onFailure(call: Call<ArrayList<Announcement>>, t: Throwable) {
         t.printStackTrace()
+        listener.onFailure()
     }
 
     companion object {
@@ -47,5 +48,6 @@ private lateinit var listener: DataCallback
 
     interface DataCallback{
         fun onResponse(list: ArrayList<Announcement>)
+        fun onFailure()
     }
 }
